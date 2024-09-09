@@ -4,9 +4,7 @@ int main(){
     int r;
     scanf("%d %d",&a,&b,&c);
 
-    c=(~c)+1;
-
-    r = (a&c)|(b&(~c));
+    r = (c ? a : b);
     
     printf("%d",r);
 
