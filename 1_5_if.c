@@ -4,7 +4,8 @@ int main(){
     int r;
     scanf("%d %d",&a,&b,&c);
 
-    r = (c ? a : b);
+    unsigned int mask = ~c + 1; // Create a mask based on c
+    r = (a & mask) | (b & ~mask);
     
     printf("%d",r);
 
